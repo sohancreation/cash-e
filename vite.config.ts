@@ -11,6 +11,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 // Also redirect the Supabase client to an in-memory mock so the app runs without a database.
 export default defineConfig({
+  cloudflare: process.env.NETLIFY ? false : undefined,
   tanstackStart: {
     server: { entry: "server" },
   },

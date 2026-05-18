@@ -9,8 +9,3 @@ export default async (request, context) => {
     return new Response("Internal Server Error", { status: 500 });
   }
 };
-
-// Configure the function to intercept all dynamic requests
-export const config = {
-  path: "/*",
-};
